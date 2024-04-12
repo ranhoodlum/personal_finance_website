@@ -14,7 +14,30 @@
         <title>Paisa:{% block title%}{% endblock %}</title>
     </head>
     <body>
-       {% block body %}{% endblock %}
-       
+        <div class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <!-- show this tottle only when logged in -->
+                <button class="navbar-toggler" type="button" > <!-- remaining -->
+                </button>
+                
+                <a href="index.html" class="navbar-brand">
+                    <span>
+                        <img src="/static/Logo_font_island_movements.png" style="width: 50px; height:auto">
+                    </span>
+                    <span class="fs-2" style="margin-left: -13px; color: #00ff60;">
+                        aisa <!-- in large -->
+                    </span>
+                </a>
+                
+                <div class="navbar-text fs-2" style="color: aliceblue;">{{title}}</div>
+                
+                <!-- show this only if logged in -->
+                <div>
+                    <!-- get first name and last name from the user when signup, put that in db, show the letters in that place
+                        see stackoverflow on how to do that-->    
+                </div>
+            </div>
+        </div>
+        {% block main %}{% endblock %}        
     </body>
 </html>
