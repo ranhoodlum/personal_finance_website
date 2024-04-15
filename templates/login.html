@@ -3,5 +3,23 @@
 {% block title %}login{% endblock %}
 
 {% block main %}
-    
+    <div class="container-fluid">
+        <div class="row justify-container-center">
+            <div class="col col-sm-6 col-md-4">
+                <!-- we're using form-container class because we *might* style it later. There isn't any pre-defined form-container bs class-->
+                <form class="form-container" action="/login" method="post">
+                    <div class="mb-3">
+                        <input type="text" id="name" placeholder="Enter username" autofocus autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="password" autocomplete="off"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="confirmation" autocomplete="off">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}  

@@ -15,5 +15,5 @@ def login():
         name = request.form.get("name")
         email = request.form.get("email")
         password = request.form.get("password")
-    return render_template("login.html")
+    return render_template("login.html", title="Login")
         
